@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/MainPage.scss'
+import {connect} from "react-redux";
+import {toggleNav} from "../actionCreators/internalActions";
 
 
 class MainPage extends Component {
@@ -14,14 +16,14 @@ class MainPage extends Component {
 
         return (
                 <div className="front">
-                    <div className="wrapper">
-                        <div className="text">Finances, made easy.</div>
+                    <div className="front-wrapper">
+                        <div className="front-text">Finances, made easy.</div>
 
-                        <div className="button">Get started</div>
+                        <div onClick={this.props.toggleNav} className="front-button">Get started</div>
                     </div>
                 </div>
         );
     }
 }
 
-export default MainPage;
+export default connect(null,{toggleNav})(MainPage);

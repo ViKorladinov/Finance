@@ -1,0 +1,14 @@
+.nav-wrapper {
+  height: 100vh;
+  display: inline-flex;
+  background: url(http://192.168.1.4:4567/uploads/background.jpg?resize=1980)no-repeat fixed center center;
+  background-size: cover;
+  width: 0;
+  transition: 300ms;
+  background-blend-mode: multiply;
+}
+.nav-wrapper-extended {
+  @extend .nav-wrapper;
+  background-color: rgba(0,0,0,0.75);
+  width: 400px;
+}

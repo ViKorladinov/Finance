@@ -1,12 +1,19 @@
 import React from 'react';
-import MainPage from "./components/MainPage";
+import {BrowserRouter as Router} from 'react-router-dom'
+import FinancesRouter from "./FinancesRouter";
+import {Provider} from "react-redux";
+import {store} from "./store";
 
 function App() {
-  return (
-    <div className="App">
-        <MainPage/>
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <div className="App">
+                <Router>
+                    <FinancesRouter/>
+                </Router>
+            </div>
+        </Provider>
+    );
 }
 
 export default App;

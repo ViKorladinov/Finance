@@ -1,42 +1,50 @@
-.front{
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import "NavigationBar";
+
+.front {
+  flex:1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   //background-color: #1be7ff;
-    background: url( http://192.168.1.4:4567/uploads/background.jpg?resize=1980) no-repeat fixed center center;
-   background-size: cover;
+  background: url(http://192.168.1.4:4567/uploads/background.jpg?resize=1980) no-repeat fixed center center;
+  background-size: cover;
 }
-.wrapper{
+
+.front-wrapper {
   width: 95%;
-  height: 95vh;
+  height: 94vh;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @font-face {
   font-family: BebasNeue-Light;
   src: url(../fonts/BebasNeue-Light.ttf);
 }
+
 @font-face {
   font-family: BebasNeue-Regular;
   src: url(../fonts/BebasNeue-Regular.otf);
 }
-.text{
+
+.front-text {
   font-size: 10vh;
   color: white;
   font-family: BebasNeue-Regular, sans-serif;
   border-bottom: white 4px solid;
 }
-.button{
+
+.front-button {
   font-size: 4vh;
   font-family: BebasNeue-Light, sans-serif;
   border: white 2px solid;
   margin-top: 1vh;
   padding: 1vh;
 }
-.button:hover{
+
+.front-button:hover {
   background-color: white;
   cursor: pointer;
 }
