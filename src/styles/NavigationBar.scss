@@ -1,14 +1,43 @@
 .nav-wrapper {
   height: 100vh;
-  display: inline-flex;
-  background: url(http://192.168.1.4:4567/uploads/background.jpg?resize=1980)no-repeat fixed center center;
+  display: flex;
+  background: url(http://192.168.1.4:8000/uploads/background.jpg?resize=1980)no-repeat fixed center center;
   background-size: cover;
   width: 0;
   transition: 300ms;
   background-blend-mode: multiply;
+  flex-direction: column;
 }
 .nav-wrapper-extended {
   @extend .nav-wrapper;
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.85);
   width: 400px;
+}
+
+.nav-wrapper .nav-item{
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  font-size: 5vh;
+  color: transparent;
+  font-family: BebasNeue-Light, sans-serif;
+  width: 90%;
+  border-bottom: white solid 2px;
+}
+.nav-wrapper-extended .nav-item{
+  @extend .nav-item;
+  color: white;
+  transition: 1500ms;
+}
+.nav-item span{
+  cursor: pointer;
+}
+.nav-item .log{
+  float: left;
+}
+.nav-item .reg{
+  float: right;
+}
+.nav-content{
+  margin-top: 20px;
 }
